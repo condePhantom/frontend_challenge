@@ -1,5 +1,5 @@
-const base_url = process.env.REACT_APP_API_URL;
-const token = process.env.REACT_APP_API_TOKEN;
+const base_url = import.meta.env.VITE_API_URL;
+const token = import.meta.env.VITE_API_TOKEN;
 
 
 const headers = {
