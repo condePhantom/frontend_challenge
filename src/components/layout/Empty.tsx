@@ -52,7 +52,7 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
     window !== undefined ? () => window.document.body : undefined;
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor: "rgb(64,11,7)" }}>
         <Toolbar sx={{ justifyContent: "space-between", mx: 8 }}>
           <IconButton
             color="inherit"
@@ -108,10 +108,6 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
         <Toolbar sx={{ display: { xs: "block", sm: "none" } }} />
         {children}
       </Container>
-      <Box component="main" sx={{ p: 1, width: "100%", mt: 8 }}>
-        <Toolbar sx={{ display: { xs: "block", sm: "none" } }} />
-        {children}
-      </Box>
     </Box>
   );
 };
