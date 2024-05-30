@@ -1,13 +1,13 @@
 
 import { get_api } from "./api";
-import { Movie, PopularMoviesResponse } from '../types/Movie';
+import {  PopularMoviesResponse } from '../types/Movie';
 
 
 export const getPopularMovies = async (page: number =1): Promise<PopularMoviesResponse | null> => {
   try {
     const result = await get_api(`movie/popular?page=${page}`);
     if (typeof result === 'string') {
-      throw new Error('La respuesta de la API es una cadena en lugar de un objeto esperado');
+      throw new Error('API response is a string instead of an expected object');
     }
     return result;
   } catch(error) {
@@ -16,13 +16,13 @@ export const getPopularMovies = async (page: number =1): Promise<PopularMoviesRe
   }
 };
 
-export const getMovieDetails = async (id: string): Promise<Movie | null> => {
+export const getMovieDetails = async (id: string): Promise<PopularMoviesResponse | null> => {
   try{
     const result = await get_api(`movie/${id}`);
     if (typeof result === 'string') {
-      throw new Error('La respuesta de la API es una cadena en lugar de un objeto esperado');
+      throw new Error('API response is a string instead of an expected object');
     }
-    return result.results;
+    return result;
   } catch(error){
     console.error("Error fetching movie details")
     return null;
