@@ -10,7 +10,7 @@ const MovieCardList: FC<MovieCardListProps> = ({ movies }) => {
   return (
     <Grid container spacing={4}>
       {movies?.map((movie) => (
-        <MovieCard movie={movie} />
+        <MovieCard movie={movie} key={movie.id} />
       ))}
     </Grid>
   );

@@ -10,7 +10,6 @@ interface MovieCardProps {
 }
 
 const MovieCard: FC<MovieCardProps> = ({ movie }) => {
-  console.log(movie);
   return (
     <Grid
       item
