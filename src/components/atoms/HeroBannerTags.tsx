@@ -1,17 +1,32 @@
 import { FC } from "react";
 import { Box, Chip } from "@mui/material";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 
 interface HeroBannerTagsProps {
   tags: number[];
 }
 
 const HeroBannerTags: FC<HeroBannerTagsProps> = ({ tags }) => {
-  //NOTE: get from redux
-  return (
+  const { genres, status } = useSelector((state: RootState) => state.genres);
+  let result = "-";
+  console.log(genres);
+
+  const findLabel = (id: number): string => {
+    if (genres) {
+      const match = genres.find((f) => f.id === id);
+      if (match) {
+        result = match.name;
+      }
+    }
+    return result;
+  };
+  const isLoaded = status === "succeeded";
+  return isLoaded ? (
     <Box sx={{ width: "50%", textAlign: "left", mb: 1 }}>
       {tags?.map((tag: number, index: number) => (
         <Chip
-          label={"Supernatural"}
+          label={findLabel(tag)}
           key={tag + index}
           variant="outlined"
           size="small"
@@ -20,7 +35,7 @@ const HeroBannerTags: FC<HeroBannerTagsProps> = ({ tags }) => {
         />
       ))}
     </Box>
-  );
+  ) : null;
 };
 
 export default HeroBannerTags;
