@@ -20,7 +20,7 @@ const SkeletonList: FC<SkeletonListProps> = ({ count }) => {
         >
           <Skeleton
             height={400}
-            width={300}
+            width={350}
             variant="rectangular"
             animation="pulse"
             sx={{
