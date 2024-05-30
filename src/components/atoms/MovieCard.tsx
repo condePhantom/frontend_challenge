@@ -29,7 +29,7 @@ const MovieCard: FC<MovieCardProps> = ({ movie }) => {
             height="330"
             image={`${image_url}/w300/${movie.poster_path}`}
             alt={movie.title}
-            sx={{ objectFit: "contain" }}
+            sx={{ objectFit: "contain", paddingTop: 3 }}
           />
         </Link>
         <CardContent sx={{ p: 1 }}>
