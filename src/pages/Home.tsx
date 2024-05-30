@@ -5,6 +5,7 @@ import HeroBanner from "../components/molecules/HeroBanner";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../store";
 import { fetchPopularMovies } from "../store/movieSlice";
+import { fetchGenresMovies } from "../store/genresSlice";
 import MovieCardListContainer from "../components/organisms/MovieCardListContainer";
 
 const Home: FC = () => {
@@ -16,6 +17,7 @@ const Home: FC = () => {
   useEffect(() => {
     //First call is with page 1
     dispatch(fetchPopularMovies(1));
+    dispatch(fetchGenresMovies());
   }, [dispatch]);
 
   const isLoaded = status === "succeeded";
