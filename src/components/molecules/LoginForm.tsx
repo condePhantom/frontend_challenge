@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { TextField, Button, CardActions } from "@mui/material";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
 
 interface FormInputProps {
@@ -30,9 +31,11 @@ const LoginForm: FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormInputProps>();
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<FormInputProps> = (data) => {
     console.log(data);
+    navigate("/");
   };
 
   return (
