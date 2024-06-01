@@ -18,19 +18,33 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { Movie, Menu as MenuIcon, Login } from "@mui/icons-material";
 
+//NOTE: this could be in a separete folder of utils
 const drawerWidth = 240;
 const navItems: { name: string; icon: ReactNode; url: string }[] = [
   { name: "Movies", icon: <Movie />, url: "/" },
   { name: "Login", icon: <Login />, url: "/login" },
 ];
 
+/**
+ * Functional Component EmptyLayout - Provides a layout with a navigation drawer and app bar
+ * @param {PropsWithChildren} props - The props for the component
+ * @param {ReactNode} props.children - All the child components to render within the layout.
+ */
 const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  /**
+   * Change the state of the mobile drawer
+   */
   const handleDrawer = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  /**
+   * @function - Handles the navigation to given path
+   * @param {string} path  The path to navigate to.
+   */
 
   const handleNavigation = (path: string) => {
     navigate(path);
