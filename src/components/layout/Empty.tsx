@@ -45,7 +45,7 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
       <List>
         {navItems.map((item, index) => (
           <ListItem
-            key={item.name + index}
+            key={item.name + "-" + index}
             disablePadding
             sx={{
               "& .MuiListItemIcon-root": {
@@ -83,10 +83,12 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
           </IconButton>
           <Typography
             variant="h6"
+            onClick={() => navigate("/")}
             component="div"
             sx={{
               flexGrow: 0,
               display: { xs: "none", sm: "block" },
+              cursor: "pointer",
             }}
           >
             Finsphera Challenge
@@ -96,10 +98,14 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
               display: { xs: "none", sm: "block" },
             }}
           >
-            {navItems.map((item, index) => (
-              <Link to={item.url} style={{ textDecoration: "none" }}>
+            {navItems.map(({ name, url }, index) => (
+              <Link
+                to={url}
+                style={{ textDecoration: "none" }}
+                key={"link" + name + index}
+              >
                 <Button
-                  key={item.name + index}
+                  key={name + index}
                   variant="text"
                   disableRipple
                   sx={{
@@ -114,7 +120,7 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
                     },
                   }}
                 >
-                  {item.name}
+                  {name}
                 </Button>
               </Link>
             ))}
