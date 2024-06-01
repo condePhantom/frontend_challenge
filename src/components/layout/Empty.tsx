@@ -18,7 +18,8 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { Movie, Menu as MenuIcon, Login } from "@mui/icons-material";
 
-//NOTE: this could be in a separete folder of utils
+/*NOTE: this could be in a separate folder of utils or 
+constant but this is one case so I prefered to put it in the same file*/
 const drawerWidth = 240;
 const navItems: { name: string; icon: ReactNode; url: string }[] = [
   { name: "Movies", icon: <Movie />, url: "/" },
