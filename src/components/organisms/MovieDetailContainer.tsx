@@ -19,6 +19,10 @@ const MovieDetailContainer: FC = () => {
   const movie = movies?.find((m) => m.id + "" === id);
 
   useEffect(() => {
+    /* Validate if is an id in the path o the movies data are in the state of redux
+    Using the data stored in redux saves us a request, although if more data is required,
+    a call to the api would have to be made.
+    */
     if (!id || !movies?.length) {
       navigate("/");
     }

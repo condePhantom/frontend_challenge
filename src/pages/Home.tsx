@@ -28,6 +28,7 @@ const Home: FC = () => {
   useEffect(() => {
     //First call is with page 1
     dispatch(fetchPopularMovies(1));
+    //Get the genres catalog
     dispatch(fetchGenresMovies());
   }, [dispatch]);
 

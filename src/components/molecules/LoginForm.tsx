@@ -49,6 +49,8 @@ const LoginForm: FC = () => {
    * @param {FormInputProps} data - The form data (email, password)
    */
   const onSubmit: SubmitHandler<FormInputProps> = (data) => {
+    /*Once the form validations are completed, additional validations can be done 
+    before calling the method to make a post or put.*/
     console.log(data);
     navigate("/");
   };

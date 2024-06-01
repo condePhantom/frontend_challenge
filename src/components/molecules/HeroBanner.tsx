@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Grid, Card, Box, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Card, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import HeroBannerDescription from "../atoms/HeroBannerDescription";
 import HeroBannerTags from "../atoms/HeroBannerTags";
@@ -22,9 +22,6 @@ interface HeroBannerProps {
  * @property {Movie} movie - The movie object
  */
 const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
-  const theme = useTheme();
-  const isXS = useMediaQuery(theme.breakpoints.down("sm"));
-
   const {
     id,
     genre_ids: tags,
@@ -39,9 +36,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
       <Link to={`/movie/${id}`} style={{ textDecoration: "none" }}>
         <Card
           sx={{
-            backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 1) ${
-              isXS ? "40%" : "65%"
-            }, transparent), url(${image_url}/original/${image})`,
+            backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 1) ${"65%"}, transparent), url(${image_url}/original/${image})`,
             width: "100%",
             height: "100%",
             display: "flex",
