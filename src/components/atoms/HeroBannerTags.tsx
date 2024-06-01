@@ -23,7 +23,7 @@ const HeroBannerTags: FC<HeroBannerTagsProps> = ({ tags }) => {
   };
   const isLoaded = status === "succeeded";
   return isLoaded ? (
-    <Box sx={{ width: "50%", textAlign: "left", mb: 1 }}>
+    <Box sx={{ width: "100%", textAlign: "left", my: 1 }}>
       {tags?.map((tag: number, index: number) => (
         <Chip
           label={findLabel(tag)}
