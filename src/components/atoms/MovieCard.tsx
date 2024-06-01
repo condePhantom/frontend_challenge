@@ -31,23 +31,27 @@ const MovieCard: FC<MovieCardProps> = ({ movie }) => {
       sx={{ height: "100%", padding: 0, mb: 3 }}
     >
       <Card
-        sx={{ backgroundColor: "rgba(64,11,7, 0.6)", borderRadius: 6 }}
+        sx={{ backgroundColor: "rgba(64,11,7, 0.6)", borderRadius: 4 }}
         elevation={2}
       >
         <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
           <CardMedia
             component="img"
-            height="330"
+            height="100%"
             image={`${image_url}/w300/${movie.poster_path}`}
             alt={movie.title}
-            sx={{ objectFit: "contain", paddingTop: 3 }}
+            sx={{
+              objectFit: "contain",
+              paddingTop: { xs: 0, md: 3 },
+              maxHeight: { xs: 300, md: 350 },
+            }}
           />
+          <CardContent>
+            <Typography variant="h6" color="white">
+              {movie.title}
+            </Typography>
+          </CardContent>
         </Link>
-        <CardContent sx={{ p: 1 }}>
-          <Typography variant="h6" component="p" color="white">
-            {movie.title}
-          </Typography>
-        </CardContent>
       </Card>
     </Grid>
   );
