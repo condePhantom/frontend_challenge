@@ -6,11 +6,23 @@ import HeroBannerDescription from "./HeroBannerDescription";
 import HeroBannerRating from "./HeroBannerRating";
 import HeroBannerTags from "./HeroBannerTags";
 
+/**
+ * Variable image_url to get the url api of images
+ */
 const image_url = import.meta.env.VITE_IMAGE_URL;
 
+/**
+ * @interface DetailedMovieCardProps - Type for the detailed movie card of a movie
+ * @property { Movie } movie - The movie object containing all the details
+ */
 interface DetailedMovieCardProps {
   movie: Movie;
 }
+
+/**
+ * Functional Component DetailedMovieCard - Component that display detailed info of a movie
+ * @property movie - Movie Type
+ */
 const DetailedMovieCard: FC<DetailedMovieCardProps> = ({ movie }) => {
   const { title, vote_average, poster_path, overview, genre_ids } = movie;
 

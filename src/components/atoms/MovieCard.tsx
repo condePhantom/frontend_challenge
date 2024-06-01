@@ -3,12 +3,23 @@ import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Movie } from "../../types/Movie";
 
+/**
+ * Variable image_url to get the url api of images
+ */
 const image_url = import.meta.env.VITE_IMAGE_URL;
 
+/**
+ * @interface MovieCardProps - Type for the simple movie card of a movie
+ * @property { Movie } movie - The movie object containing all the details
+ */
 interface MovieCardProps {
   movie: Movie;
 }
 
+/**
+ * Functional Component MovieCard - Component that display image and title of a movie
+ * @property movie - Movie Type
+ */
 const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   return (
     <Grid

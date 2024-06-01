@@ -1,11 +1,20 @@
 import { FC } from "react";
 import { Typography } from "@mui/material";
-
+/**
+ * @interface HeroBannerDescriptionProps - Type for the HeroBannerDescription component
+ * @property { string } description - The description text of the movie
+ * @property { boolean} full - The flag that indicates if the width will be full or half.
+ */
 interface HeroBannerDescriptionProps {
   description: string;
   full: boolean;
 }
 
+/**
+ * Functional Component HeroBannerDescription - Component that display the overview of the movie
+ * @property description - string Type
+ * @property full - boolean Type
+ */
 const HeroBannerDescription: FC<HeroBannerDescriptionProps> = ({
   description,
   full = true,

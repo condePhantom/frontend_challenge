@@ -12,6 +12,11 @@ const HeroBannerTags: FC<HeroBannerTagsProps> = ({ tags }) => {
   let result = "-";
   console.log(genres);
 
+  /**
+   *
+   * @param id
+   * @returns
+   */
   const findLabel = (id: number): string => {
     if (genres) {
       const match = genres.find((f) => f.id === id);
@@ -21,6 +26,7 @@ const HeroBannerTags: FC<HeroBannerTagsProps> = ({ tags }) => {
     }
     return result;
   };
+
   const isLoaded = status === "succeeded";
   return isLoaded ? (
     <Box sx={{ width: "100%", textAlign: "left", my: 1 }}>

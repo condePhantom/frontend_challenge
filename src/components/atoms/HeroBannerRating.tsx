@@ -2,10 +2,18 @@ import { FC } from "react";
 import { Rating, Box } from "@mui/material";
 import { Star } from "@mui/icons-material";
 
+/**
+ * @interface HeroBannerRatingProps - Type for the HeroBannerRating component
+ * @property { number } rating - The rating amount of the movie
+ */
 interface HeroBannerRatingProps {
   rating: number;
 }
 
+/**
+ * Functional Component HeroBannerRating - Component that display the rating of the movie with stars
+ * @property rating - number Type
+ */
 const HeroBannerRating: FC<HeroBannerRatingProps> = ({ rating }) => {
   return (
     <Box display="flex" flexDirection="row" mt={1}>

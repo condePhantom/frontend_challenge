@@ -1,10 +1,21 @@
 import { FC } from "react";
 import { Typography, Box, Avatar } from "@mui/material";
 
+/**
+ * @interface LoginHeaderProps - Type for the LoginHeader component
+ * @property { string } logo - The path of the logo that will be displayed
+ * @property { string } title - The title that will be displayed in the header
+ */
 interface LoginHeaderProps {
   logo: string;
   title: string;
 }
+
+/**
+ * Functional Component LoginHeader - Component that display the header for a form including a title and a logo
+ * @property title - string Type
+ * @property logo - string Type
+ */
 const LoginHeader: FC<LoginHeaderProps> = ({ logo, title }) => {
   return (
     <>
