@@ -3,7 +3,11 @@ import { get_api } from "./api";
 
 import {  GenresResponse } from "../types/Genres";
 
-
+/**
+ * @function - Function to fetch the list of movie genres from the API
+ * @returns {Promise<GenresResponse | null>} - The JSON response from the API or null if an error occurs
+ * @throws - In case if the request fails an error will be return
+ */
 export const getGenresMovies = async (): Promise<GenresResponse | null> => {
   try {
     const result = await get_api(`genre/movie/list`);
