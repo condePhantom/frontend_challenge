@@ -4,11 +4,19 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { styled } from "@mui/system";
 
+/**
+ * @interface FormInputProps - Interface for form input props
+ * @property { string } email - The email input
+ * @property { string } password - The password input
+ */
 interface FormInputProps {
   email: string;
   password: string;
 }
 
+/**
+ * Styled TextField component with custom color styles for focus and hover states.
+ */
 const STextField = styled(TextField)({
   "& .MuiOutlinedInput-root": {
     "&.Mui-focused fieldset": {
@@ -25,6 +33,9 @@ const STextField = styled(TextField)({
   },
 });
 
+/**
+ * Functional Component LoginForm - Component for handling user login (dummy)
+ */
 const LoginForm: FC = () => {
   const {
     register,
@@ -33,6 +44,10 @@ const LoginForm: FC = () => {
   } = useForm<FormInputProps>();
   const navigate = useNavigate();
 
+  /**
+   * @function to handle form submission
+   * @param {FormInputProps} data - The form data (email, password)
+   */
   const onSubmit: SubmitHandler<FormInputProps> = (data) => {
     console.log(data);
     navigate("/");

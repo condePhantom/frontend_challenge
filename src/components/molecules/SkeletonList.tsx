@@ -1,9 +1,18 @@
 import { FC } from "react";
 import { Grid, Skeleton } from "@mui/material";
 
+/**
+ * @interface SkeletonListProps - Type for the SkeletonList component
+ * @property { number } count - The amount of skeletons that will be rendered
+ */
 interface SkeletonListProps {
   count: number;
 }
+
+/**
+ * Functional Component SkeletonList - Component that display a a List of Skeletons, the amount depends of the props count
+ * @property count - number Type
+ */
 const SkeletonList: FC<SkeletonListProps> = ({ count }) => {
   //just to create an array of the size of count to render the skeletons
   const array = ".".repeat(count).split("");

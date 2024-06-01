@@ -9,10 +9,18 @@ import HeroBannerRating from "../atoms/HeroBannerRating";
 const image_url = import.meta.env.VITE_IMAGE_URL;
 import { Movie } from "../../types/Movie";
 
+/**
+ * @interface HeroBannerProps - Type for the Hero banner component of a movie
+ * @property { Movie } movie - The movie object containing all the details
+ */
 interface HeroBannerProps {
   movie: Movie;
 }
 
+/**
+ * Functional Component HeroBanner - Component that display a Hero banner with the details of a movie
+ * @property movie - Movie Type
+ */
 const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
   const theme = useTheme();
   const isXS = useMediaQuery(theme.breakpoints.down("sm"));
