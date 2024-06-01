@@ -8,7 +8,7 @@ interface HeroBannerRatingProps {
 
 const HeroBannerRating: FC<HeroBannerRatingProps> = ({ rating }) => {
   return (
-    <Box display="flex" flexDirection="row">
+    <Box display="flex" flexDirection="row" mt={1}>
       <Rating
         emptyIcon={<Star sx={{ color: "gray" }} />}
         name="ratingMovie"
