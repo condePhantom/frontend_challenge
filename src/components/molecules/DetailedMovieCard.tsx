@@ -3,7 +3,7 @@ import { Card, CardMedia, CardContent } from "@mui/material";
 import { Movie } from "../../types/Movie";
 import HeroBannerTitle from "../atoms/HeroBannerTitle";
 import HeroBannerDescription from "../atoms/HeroBannerDescription/HeroBannerDescription";
-import HeroBannerRating from "../atoms/HeroBannerRating";
+import HeroBannerRating from "../atoms/HeroBannerRatings/HeroBannerRating";
 import HeroBannerTags from "../atoms/HeroBannerTags";
 
 /**
