@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Card, CardContent, Box } from "@mui/material";
 import LoginForm from "../molecules/LoginForm";
-import LoginHeader from "../atoms/LoginFormHeader";
+import LoginHeader from "../atoms/LoginFormHeader/LoginFormHeader";
 import finspheraLogo from "../../assets/finsphera_logo.jpeg";
 
 /**
