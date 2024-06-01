@@ -53,7 +53,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
             <HeroBannerTitle title={title} />
             <HeroBannerTags tags={tags} />
             <HeroBannerRating rating={rating} />
-            <HeroBannerDescription description={description} />
+            <HeroBannerDescription description={description} full={false} />
           </Box>
         </Card>
       </Link>
