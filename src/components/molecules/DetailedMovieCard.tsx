@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Card, CardMedia, CardContent } from "@mui/material";
 import { Movie } from "../../types/Movie";
 import HeroBannerTitle from "../atoms/HeroBannerTitle";
-import HeroBannerDescription from "../atoms/HeroBannerDescription";
+import HeroBannerDescription from "../atoms/HeroBannerDescription/HeroBannerDescription";
 import HeroBannerRating from "../atoms/HeroBannerRating";
 import HeroBannerTags from "../atoms/HeroBannerTags";
 
