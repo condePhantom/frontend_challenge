@@ -15,13 +15,15 @@ import { fetchGenresMovies } from "../store/genresSlice";
 import MovieCardListContainer from "../components/organisms/MovieCardListContainer";
 import DetailedMovieCard from "../components/atoms/DetailedMovieCard";
 
+/**
+ * Functional Component Home - The main page of the app that displays popular movies with a hero banner
+ */
 const Home: FC = () => {
   const dispatch: AppDispatch = useDispatch();
+  //Get the movies data from redux
   const { movies, status } = useSelector((state: RootState) => state.movies);
   const theme = useTheme();
   const lowerMD = useMediaQuery(theme.breakpoints.down("md"));
-
-  console.log(movies);
 
   useEffect(() => {
     //First call is with page 1

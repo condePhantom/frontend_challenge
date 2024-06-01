@@ -4,6 +4,9 @@ import { Box } from "@mui/material";
 
 import LoginCard from "../components/organisms/LoginCard";
 
+/**
+ * Functional Component Login - The login page that displays a dummy authentication form
+ */
 const Login: FC = () => {
   return (
     <Box
