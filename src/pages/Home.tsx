@@ -13,7 +13,7 @@ import { RootState, AppDispatch } from "../store";
 import { fetchPopularMovies } from "../store/movieSlice";
 import { fetchGenresMovies } from "../store/genresSlice";
 import MovieCardListContainer from "../components/organisms/MovieCardListContainer";
-import DetailedMovieCard from "../components/atoms/DetailedMovieCard";
+import DetailedMovieCard from "../components/molecules/DetailedMovieCard";
 
 /**
  * Functional Component Home - The main page of the app that displays popular movies with a hero banner

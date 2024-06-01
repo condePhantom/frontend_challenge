@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, CircularProgress } from "@mui/material";
-import DetailedMovieCard from "../atoms/DetailedMovieCard";
+import DetailedMovieCard from "../molecules/DetailedMovieCard";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 

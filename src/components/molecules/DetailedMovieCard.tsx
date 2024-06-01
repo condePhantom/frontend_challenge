@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Card, CardMedia, CardContent } from "@mui/material";
 import { Movie } from "../../types/Movie";
-import HeroBannerTitle from "./HeroBannerTitle";
-import HeroBannerDescription from "./HeroBannerDescription";
-import HeroBannerRating from "./HeroBannerRating";
-import HeroBannerTags from "./HeroBannerTags";
+import HeroBannerTitle from "../atoms/HeroBannerTitle";
+import HeroBannerDescription from "../atoms/HeroBannerDescription";
+import HeroBannerRating from "../atoms/HeroBannerRating";
+import HeroBannerTags from "../atoms/HeroBannerTags";
 
 /**
  * Variable image_url to get the url api of images
