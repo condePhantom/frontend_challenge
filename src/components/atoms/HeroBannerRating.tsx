@@ -12,7 +12,7 @@ interface HeroBannerRatingProps {
 
 /**
  * Functional Component HeroBannerRating - Component that display the rating of the movie with stars
- * @property rating - number Type
+ * @property {number} rating - The rating amount ot the movie
  */
 const HeroBannerRating: FC<HeroBannerRatingProps> = ({ rating }) => {
   return (

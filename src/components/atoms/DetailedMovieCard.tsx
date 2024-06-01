@@ -21,7 +21,7 @@ interface DetailedMovieCardProps {
 
 /**
  * Functional Component DetailedMovieCard - Component that display detailed info of a movie
- * @property movie - Movie Type
+ * @property {Movie} movie - The movie object
  */
 const DetailedMovieCard: FC<DetailedMovieCardProps> = ({ movie }) => {
   const { title, vote_average, poster_path, overview, genre_ids } = movie;

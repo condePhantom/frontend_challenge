@@ -19,7 +19,7 @@ interface HeroBannerProps {
 
 /**
  * Functional Component HeroBanner - Component that display a Hero banner with the details of a movie
- * @property movie - Movie Type
+ * @property {Movie} movie - The movie object
  */
 const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
   const theme = useTheme();

@@ -11,7 +11,7 @@ interface SkeletonListProps {
 
 /**
  * Functional Component SkeletonList - Component that display a a List of Skeletons, the amount depends of the props count
- * @property count - number Type
+ * @property {number} count - The number of skeletons that will be rendered
  */
 const SkeletonList: FC<SkeletonListProps> = ({ count }) => {
   //just to create an array of the size of count to render the skeletons

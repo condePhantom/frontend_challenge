@@ -13,8 +13,8 @@ interface LoginHeaderProps {
 
 /**
  * Functional Component LoginHeader - Component that display the header for a form including a title and a logo
- * @property title - string Type
- * @property logo - string Type
+ * @property {string} title - The title of the header
+ * @property {string} logo - The logo that will be displayed
  */
 const LoginHeader: FC<LoginHeaderProps> = ({ logo, title }) => {
   return (

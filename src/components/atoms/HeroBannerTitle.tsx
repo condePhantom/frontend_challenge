@@ -11,7 +11,7 @@ interface HeroBannerTitleProps {
 
 /**
  * Functional Component HeroBannerTitle - Component that display the title of the movie
- * @property title - string Type
+ * @property {string } title - The title text of the movie
  */
 const HeroBannerTitle: FC<HeroBannerTitleProps> = ({ title }) => {
   return (

@@ -13,7 +13,7 @@ interface MovieCardListProps {
 
 /**
  * Functional Component MovieCardList - Component that display a a List of MovieCard with the details of each movie
- * @property movies - Movie[] Type
+ * @property { Movie[]} movies - The movie array to display
  */
 const MovieCardList: FC<MovieCardListProps> = ({ movies }) => {
   return (

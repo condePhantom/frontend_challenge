@@ -18,7 +18,7 @@ interface MovieCardProps {
 
 /**
  * Functional Component MovieCard - Component that display image and title of a movie
- * @property movie - Movie Type
+ * @property {Movie} movie - The movie object
  */
 const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   return (

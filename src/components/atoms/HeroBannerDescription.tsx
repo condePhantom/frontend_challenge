@@ -12,8 +12,8 @@ interface HeroBannerDescriptionProps {
 
 /**
  * Functional Component HeroBannerDescription - Component that display the overview of the movie
- * @property description - string Type
- * @property full - boolean Type
+ * @property {string} description - The description text to display
+ * @property {boolean} full - The flag that indicate the full width
  */
 const HeroBannerDescription: FC<HeroBannerDescriptionProps> = ({
   description,
