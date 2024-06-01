@@ -1,11 +1,12 @@
 import { FC } from "react";
-
 import { Card, CardContent, Box } from "@mui/material";
 import LoginForm from "../molecules/LoginForm";
 import LoginHeader from "../atoms/LoginFormHeader";
-
 import finspheraLogo from "../../assets/finsphera_logo.jpeg";
 
+/**
+ * Functional Component LoginCard - Component that render login header and login form components
+ */
 const LoginCard: FC = () => {
   return (
     <Box

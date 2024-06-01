@@ -6,6 +6,9 @@ import MovieCardList from "../molecules/MovieCardList";
 import SkeletonList from "../molecules/SkeletonList";
 import { fetchPopularMovies } from "../../store/movieSlice";
 
+/**
+ * Functional Component MovieCardListContainer - Component that display a list of movie cards and a pagination component
+ */
 const MovieCardListContainer: FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const { movies, status } = useSelector((state: RootState) => state.movies);
@@ -18,6 +21,11 @@ const MovieCardListContainer: FC = () => {
     dispatch(fetchPopularMovies(page));
   }, [dispatch, page]);
 
+  /**
+   * @function - Function that handles the page change event for the pagination component
+   * @param event - event type
+   * @param value  - number Type
+   */
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
     value: number

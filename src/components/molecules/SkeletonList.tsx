@@ -18,7 +18,7 @@ const SkeletonList: FC<SkeletonListProps> = ({ count }) => {
   const array = ".".repeat(count).split("");
   return (
     <Grid container spacing={4}>
-      {array.map((n, i) => (
+      {array.map((_n, i) => (
         <Grid
           item
           key={i}
