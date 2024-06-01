@@ -4,7 +4,7 @@ import { Grid, Card, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import HeroBannerDescription from "../atoms/HeroBannerDescription/HeroBannerDescription";
 import HeroBannerTags from "../atoms/HeroBannerTags";
-import HeroBannerTitle from "../atoms/HeroBannerTitle";
+import HeroBannerTitle from "../atoms/HeroBannerTitle/HeroBannerTitle";
 import HeroBannerRating from "../atoms/HeroBannerRatings/HeroBannerRating";
 const image_url = import.meta.env.VITE_IMAGE_URL;
 import { Movie } from "../../types/Movie";
