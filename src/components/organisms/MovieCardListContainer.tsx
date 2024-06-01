@@ -23,11 +23,11 @@ const MovieCardListContainer: FC = () => {
 
   /**
    * @function - Function that handles the page change event for the pagination component
-   * @param event - event type
+   * @param _event - event type
    * @param value  - number Type
    */
   const handlePageChange = (
-    event: React.ChangeEvent<unknown>,
+    _event: React.ChangeEvent<unknown>,
     value: number
   ) => {
     setPage(value);
