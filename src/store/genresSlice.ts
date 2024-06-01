@@ -2,19 +2,30 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { Genre } from "../types/Genres";
 import { getGenresMovies } from "../services/genres";
 
-
-interface MovieState {
+/**
+ * @interface GenreState - Type for the state structure for genres
+ * @property { Genre[] } genres - An array of genres ids
+ * @property { string] } status - The current status of fetching movie genres
+ * @property { string | null } error - Any error message during the process
+ */
+interface GenreState {
   genres: Genre[] | undefined;
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
 }
 
-const initialState: MovieState = {
+/**
+ * The initial state variable
+ */
+const initialState: GenreState = {
   genres: [],
   status: 'idle',
   error: null,
 }
 
+/**
+ * Async thunk to fetch genres movies
+ */
 export const fetchGenresMovies = createAsyncThunk(
   "genres/fetchGenresMovies",
   async () => {
@@ -23,6 +34,9 @@ export const fetchGenresMovies = createAsyncThunk(
   }
 )
 
+/**
+ * Slice for managing movie genres
+ */
 const genresSlice = createSlice({
   name: "genres",
   initialState,
