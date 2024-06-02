@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Box, Chip } from "@mui/material";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { RootState } from "../../../store";
 
 /**
  * @interface HeroBannerTagsProps - Type for the HeroBannerTags component
