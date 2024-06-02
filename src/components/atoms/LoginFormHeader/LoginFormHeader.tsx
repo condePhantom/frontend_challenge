@@ -22,7 +22,7 @@ const LoginHeader: FC<LoginHeaderProps> = ({ logo, title }) => {
       <Box display="flex" justifyContent="center" mb={2}>
         <Avatar
           src={logo}
-          alt="Finsphera Logo"
+          alt="FinSphera Logo"
           sx={{ width: 100, height: 100 }}
         />
       </Box>

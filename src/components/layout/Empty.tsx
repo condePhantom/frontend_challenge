@@ -54,7 +54,7 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
   const drawer = (
     <Box onClick={handleDrawer} sx={{ textAlign: "center", color: "white" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Finsphera Challenge
+        FinSphera Challenge
       </Typography>
       <Divider />
       <List>
@@ -106,7 +106,7 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => {
               cursor: "pointer",
             }}
           >
-            Finsphera Challenge
+            FinSphera Challenge
           </Typography>
           <Box
             sx={{

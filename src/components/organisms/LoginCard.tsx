@@ -24,7 +24,7 @@ const LoginCard: FC = () => {
         }}
       >
         <CardContent sx={{ margin: { xs: 1, sm: 10 } }}>
-          <LoginHeader logo={finspheraLogo} title="Finsphera Challenge" />
+          <LoginHeader logo={finspheraLogo} title="FinSphera Challenge" />
           <LoginForm />
         </CardContent>
       </Card>

@@ -9,7 +9,7 @@ describe("LoginHeader component", () => {
 
     render(<LoginHeader logo={logo} title={titleText} />);
 
-    const avatar = screen.getByAltText("Finsphera Logo");
+    const avatar = screen.getByAltText("FinSphera Logo");
     expect(avatar).toBeInTheDocument();
     expect(avatar).toHaveAttribute("src", logo);
 
