@@ -32,7 +32,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ movie }) => {
   } = movie;
 
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} sx={{ height: 600 }}>
+    <Grid item xs={12} sm={6} md={4} lg={3} sx={{ height: 600, mt: { md: 8 } }}>
       <Link to={`/movie/${id}`} style={{ textDecoration: "none" }}>
         <Card
           sx={{
