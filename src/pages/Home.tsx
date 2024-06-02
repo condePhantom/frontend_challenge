@@ -62,7 +62,7 @@ const Home: FC = () => {
               </Grid>
             )
           ) : (
-            movies && <DetailedMovieCard movie={movies[0]} />
+            isLoaded && movies && <DetailedMovieCard movie={movies[0]} />
           )}
           <MovieCardListContainer />
         </Container>
